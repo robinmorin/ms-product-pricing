@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ms-product-princing
+
+api:
+  doc:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+logging:
+  file:
+    name: logs/ms-product-pricing.log
+    level: INFO
+
+server:
+  servlet:
+    context-path: /ms-product-pricing
