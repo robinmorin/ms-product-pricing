@@ -71,7 +71,7 @@ public class RestExceptionHandler {
 
     }
 
-    @ExceptionHandler(value = {RecordNotFoundException.class})
+    @ExceptionHandler(RecordNotFoundException.class)
     public ResponseEntity<Object> handleNotFound(RuntimeException exception, WebRequest request) {
         var lstErrors = List.of(MESSAGE.concat(Optional.ofNullable(exception.getMessage()).orElse(EMPTY_VALUE)));
         return buildErrorResponse(HttpStatus.NOT_FOUND, lstErrors, (ServletWebRequest) request);
