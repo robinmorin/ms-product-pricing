@@ -73,7 +73,7 @@ Este servicio fue desarrollado para consultar el precio a aplicar a los producto
     - Una vez que el servicio esta disponible en la puerta 8080, puede ejecutar el siguiente cURL con los parametros necesarios para busqueda:
 
   ```bash
-  curl --location 'http://localhost:8080/api/v1/products/35455/brands/1/applicable-price?effectiveDate=2020-06-14T10:00:00Z' --header 'accept: application/json'
+  curl --location 'http://localhost:8080/ms-product-pricing/api/v1/products/35455/brands/1/applicable-price?effectiveDate=2020-06-14T10:00:00Z' --header 'accept: application/json'
   ```
     - Una vez que el servicio esta disponible en la puerta 8080, puede usar la interfaz Swagger en la siguiente Url:
 
