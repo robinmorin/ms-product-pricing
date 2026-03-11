@@ -139,7 +139,7 @@
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
-                <version>0.8.10</version>
+                <version>0.8.11</version>
                 <executions>
                     <execution>
                         <id>prepare-agent</id>
@@ -149,9 +149,17 @@
                     </execution>
                     <execution>
                         <id>report</id>
+                        <phase>test</phase>
                         <goals>
                             <goal>report</goal>
                         </goals>
+                        <configuration>
+                            <!-- Se excluyeron de la cobertura de Jacoco estas clases porque son generadas automáticamente por OpenAPI (`model` y `api`) -->
+                            <excludes>
+                                <exclude>org/test/between/msproductpricing/model/**</exclude>
+                                <exclude>org/test/between/msproductpricing/api/**</exclude>
+                            </excludes>
+                        </configuration>
                     </execution>
                 </executions>
              </plugin>
