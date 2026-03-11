@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: ms-product-princing
+  datasource:
+    url: jdbc:h2:mem:betweendb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: sa
+  jpa:
+    hibernate:
+      ddl-auto: create
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: always
+
+api:
+  doc:
+    name: @project.name@
+    description: @project.description@
+    version: @project.version@
+
+logging:
+  file:
+    name: logs/ms-product-pricing.log
+    level: INFO
+
+server:
+  servlet:
+    context-path: /ms-product-pricing
